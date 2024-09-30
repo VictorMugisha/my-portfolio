@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Aos from "aos";
 
-import './App.css';
+import "./App.css";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -11,7 +11,6 @@ import Portfolio from "./components/UI/Portfolio";
 import Contact from "./components/UI/Contact";
 
 const App = () => {
-  
   useEffect(() => {
     Aos.init();
   }, []);
@@ -28,6 +27,6 @@ const App = () => {
       <Footer />
     </>
   );
-}
+};
 
 export default App;

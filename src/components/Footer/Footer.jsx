@@ -3,6 +3,19 @@ import React from "react";
 const Footer = () => {
   const year = new Date().getFullYear();
 
+  function handleSendingEmail() {
+    const email = "victormugishavm6@gmail.com";
+    const subject = "Hiring Enquiry";
+    const body = "Hello Victor, I would like to hire you for...";
+
+    const mailToLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+      email
+    )}&su=${subject}&body=${encodeURIComponent(body)}`;
+
+    // Open Gmail in a popup window
+    window.open(mailToLink, "_blank", "width=800,height=600");
+  }
+
   return (
     <footer className="bg-[#12141e] pt-12">
       {/* ============ Footer Top ================ */}
@@ -12,11 +25,12 @@ const Footer = () => {
             <h2 className="text-[26px] leading-10 text-white font-[400] mb-5 md:text-[1.4rem]">
               Do you want to make beautiful products?
             </h2>
-            <a href="#contact">
-              <button className="bg-primaryColor text-white font-[500] flex items-center gap-2 hover:bg-smallTextColor ease-in duration-200 py-2 px-4 rounded-[8px]">
-                <i className="ri-mail-line"></i> Hire me
-              </button>
-            </a>
+            <button
+              onClick={handleSendingEmail}
+              className="bg-primaryColor text-white font-[500] flex items-center gap-2 hover:bg-smallTextColor ease-in duration-200 py-2 px-4 rounded-[8px]"
+            >
+              <i className="ri-mail-line"></i> Hire me
+            </button>
           </div>
 
           <div className="w-full sm:w-1/2">

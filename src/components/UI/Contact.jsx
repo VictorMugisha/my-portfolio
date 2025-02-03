@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,8 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+
+  const [sending, setSending] = useState(false);
 
   const [formError, setFormError] = useState({
     name: "",
@@ -48,16 +51,24 @@ const Contact = () => {
     };
 
     // Send the email using EmailJS
+    setSending(true);
     emailjs
       .send(serviceId, templateId, templateParams, publicKey)
-      .then((response) => {
-        // Email Sent Successfully
-        console.log("Email sent successfully");
+      .then((_response) => {
+        toast.success("Email Sent Successfully", {
+          position: "top-center",
+          autoClose: 5000,
+        });
         setFormData({ name: "", email: "", subject: "", message: "" });
       })
-      .catch((error) => {
-        // Email Failed to Send
-        console.log("Email failed to send", error);
+      .catch((_error) => {
+        toast.error("Email Failed To Send!", {
+          position: "top-center",
+          autoClose: 5000,
+        });
+      })
+      .finally(() => {
+        setSending(false);
       });
   }
 
@@ -79,7 +90,7 @@ const Contact = () => {
             ></iframe>
           </div>
 
-          <div className="w-full mt-8 md:mt-0 md:w-1/2 lg:flex items-center bg-indigo-100 px-4 lg:px-8 py-8">
+          <div className="w-full mt-8 md:mt-0 md:w-1/2 lg:flex items-center bg-indigo-100 px-2 lg:px-8 py-6">
             <form className="w-full" onSubmit={submitForm}>
               <div className="mb-5 flex flex-col items-start gap-1">
                 <input
@@ -145,10 +156,25 @@ const Contact = () => {
               <button
                 type="submit"
                 className="w-full p-3 focus:outline-none rounded-[5px] bg-smallTextColor text-white hover:bg-headingColor text-center ease-linear duration-150"
+                disabled={sending}
               >
-                Send Message
+                {sending ? "Sending..." : "Send Message"}
               </button>
             </form>
+
+            <ToastContainer
+              position="top-center"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick={false}
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="light"
+            />
+
           </div>
         </div>
       </div>

@@ -67,3 +67,12 @@ section {
     display: block;
   }
 }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}

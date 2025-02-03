@@ -97,10 +97,22 @@ const Hero = () => {
           {/* ============= Hero Left End ============= */}
 
           {/* ============= Hero Img ============= */}
-          <div className="basis-1/2 mt-10 sm:mt-0">
-            <figure className="flex items-center justify-center">
-              <img src={heroImg} className="relative w-[80%] h-full" alt="" />
-            </figure>
+          <div className="basis-1/2 mt-10 sm:mt-0 flex justify-center relative">
+            {/* Animated Background Accent */}
+            <div className="absolute w-[250px] h-[250px] bg-gradient-to-r from-blue-400 to-purple-500 opacity-30 rounded-full blur-3xl -z-10 animate-pulse"></div>
+
+            {/* Hero Image Container */}
+            <div
+              className="relative w-[80%] max-w-[350px] h-auto overflow-hidden rounded-full border-4 border-transparent bg-gradient-to-r from-purple-500 via-blue-400 to-indigo-500 p-[4px] shadow-2xl 
+    before:absolute before:inset-0 before:bg-white before:rounded-full before:z-[-1] before:opacity-20 before:blur-xl 
+    hover:scale-105 transition-transform duration-500 ease-in-out animate-float"
+            >
+              <img
+                src={heroImg}
+                className="w-full h-full object-cover rounded-full"
+                alt="Victor Mugisha"
+              />
+            </div>
           </div>
           {/* ============= Hero Img End ============= */}
 

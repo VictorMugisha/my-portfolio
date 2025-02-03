@@ -35,9 +35,9 @@ const Contact = () => {
       return;
     }
 
-    const serviceId = "service_s5v8wdn";
-    const templateId = "template_pmdu0hc";
-    const publicKey = "_DeMbz3bx5N9dE5ph";
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
     const templateParams = {
       from_name: formData.name,

@@ -62,15 +62,19 @@ const Hero = () => {
               </span>
               <span>
                 <a
-                  href="#youtube"
+                  href="http://discordapp.com/users/1188580923038519388"
+                  target="_blank"
+                  rel="noreferrer"
                   className="text-smallTextColor text-[18px] font-[600]"
                 >
-                  <i className="ri-youtube-line"></i>
+                  <i className="ri-discord-line"></i>
                 </a>
               </span>
               <span>
                 <a
-                  href="#youtube"
+                  href="https://github.com/VictorMugisha"
+                  target="_blank"
+                  rel="noreferrer"
                   className="text-smallTextColor text-[18px] font-[600]"
                 >
                   <i className="ri-github-fill"></i>
@@ -78,15 +82,19 @@ const Hero = () => {
               </span>
               <span>
                 <a
-                  href="#youtube"
+                  href="https://www.linkedin.com/in/victor-mugisha-shyaka-47b10b233/"
+                  target="_blank"
+                  rel="noreferrer"
                   className="text-smallTextColor text-[18px] font-[600]"
                 >
-                  <i className="ri-facebook-line"></i>
+                  <i className="ri-linkedin-line"></i>
                 </a>
               </span>
               <span>
                 <a
-                  href="#youtube"
+                  href="https://www.instagram.com/victor_mugisha001/"
+                  target="_blank"
+                  rel="noreferrer"
                   className="text-smallTextColor text-[18px] font-[600]"
                 >
                   <i className="ri-instagram-line"></i>

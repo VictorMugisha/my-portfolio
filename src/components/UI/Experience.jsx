@@ -1,56 +1,75 @@
-import techSolutionsLogo from "../../assets/images/the-gym-logo.jpeg";
-import innovativeCodersLogo from "../../assets/images/college.png";
-import webDevStudioLogo from "../../assets/images/the-gym-logo.jpeg";
+import theGymRwandaLogo from "../../assets/images/the-gym-logo.jpeg";
+import thinkYoungLogo from "../../assets/images/thinkyoung-logo.png";
 
 export default function Experience() {
   const experienceData = [
     {
       id: 1,
-      company: "Tech Solutions Ltd.",
-      title: "UI/UX Designer",
-      duration: "2018 - 2022",
+      company: "The Gym Rwanda",
+      title: "Software Developer",
+      duration: "November 2024 - Present",
       description:
-        "Worked on designing user-friendly interfaces and improving user experiences for web applications.",
+        "Serving as a software development coach for current cohorts across various university campuses, including ALU and AUCA. Responsibilities include conducting assessments at institutions such as Kepler College.",
       skillsLearned: [
-        "User Research",
-        "Wireframing",
-        "Prototyping",
-        "Adobe XD",
-        "Figma",
+        "Coaching",
+        "Curriculum Development",
+        "Assessment Design",
+        "Team Leadership",
       ],
-      technologiesUsed: ["HTML", "CSS", "JavaScript", "React"],
-      logo: techSolutionsLogo,
+      technologiesUsed: [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Agile Methodologies",
+      ],
+      logo: theGymRwandaLogo,
+      isCurrent: true,
     },
     {
       id: 2,
-      company: "Innovative Coders Inc.",
-      title: "Full-Stack Developer",
-      duration: "2018 - 2022",
+      company: "The Gym Rwanda",
+      title: "Software Development Trainee",
+      duration: "April 2024 - November 2024",
       description:
-        "Developed full-stack web applications and optimized backend performance.",
+        "Completed an intense 7-month software development training program, gaining expertise in both frontend and backend technologies, and receiving a certificate of completion.",
       skillsLearned: [
-        "Backend Development",
-        "Database Management",
-        "REST API",
-        "Cloud Services",
+        "Full-Stack Development",
+        "Problem Solving",
+        "System Design",
+        "Software Testing",
       ],
-      technologiesUsed: ["Node.js", "Express", "MongoDB", "AWS"],
-      logo: innovativeCodersLogo,
+      technologiesUsed: [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Material UI",
+        "Headless UI",
+        "Node",
+        "Express",
+        "Nest",
+        "Docker",
+        "Jest",
+        "SQL",
+        "PostgreSQL",
+        "Prisma",
+        "MongoDB",
+      ],
+      logo: theGymRwandaLogo,
     },
     {
       id: 3,
-      company: "Web Dev Studio",
-      title: "Frontend Developer",
-      duration: "2018 - 2022",
+      company: "ThinkYoung Coding School (sponsored by Boeing)",
+      title: "Frontend & Robotics Trainee",
+      duration: "April 2022",
       description:
-        "Built dynamic and responsive user interfaces using modern JavaScript frameworks.",
+        "Completed an intensive one-month training program focused on web development fundamentals (HTML, CSS, JavaScript) and robotics. Received a certificate of participation upon completion.",
       skillsLearned: [
-        "Responsive Design",
-        "State Management",
-        "Component-based Architecture",
+        "Web Development Basics",
+        "Robotics Fundamentals",
+        "Problem-Solving",
       ],
-      technologiesUsed: ["React", "Vue.js", "Tailwind CSS"],
-      logo: webDevStudioLogo,
+      technologiesUsed: ["HTML", "CSS", "JavaScript"],
+      logo: thinkYoungLogo,
     },
   ];
 
@@ -63,7 +82,9 @@ export default function Experience() {
         {experienceData.map((experience) => (
           <div
             key={experience.id}
-            className="bg-white p-6 rounded shadow-lg text-center flex flex-col items-center cursor-pointer hover:shadow-xl transition-shadow duration-300"
+            className={`p-6 rounded shadow-lg text-center flex flex-col items-center cursor-pointer hover:shadow-xl transition-shadow duration-300 ${
+              experience.isCurrent ? "bg-blue-100" : "bg-white"
+            }`}
           >
             <div className="w-24 h-24 mb-4">
               <img

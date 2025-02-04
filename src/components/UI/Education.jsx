@@ -1,7 +1,5 @@
-import React from "react";
-// import highSchoolImg from "../../assets/images/high-school.jpg"; // Replace with your actual image path
-import collegeImg from "../../assets/images/college.png"; // Replace with your actual image path
-import highSchoolImg from "../../assets/images/college.png"; // Replace with your actual image path
+import collegeImg from "../../assets/images/college.png"; 
+import highSchoolImg from "../../assets/images/high-school.png";
 
 export default function Education() {
   const educationData = [
@@ -14,6 +12,7 @@ export default function Education() {
       image: highSchoolImg,
       aosAnimation: "fade-right",
       aosDuration: 1200,
+      hashtags: ["mathematics", "physics", "computerscience", "sciences"],
     },
     {
       id: 2,
@@ -25,6 +24,7 @@ export default function Education() {
       aosAnimation: "fade-left",
       aosDuration: 1300,
       aosDelay: 50,
+      hashtags: ["softwareengineering", "algorithms", "datastructures"],
     },
   ];
 
@@ -62,12 +62,22 @@ export default function Education() {
                     <h3 className="text-primaryColor font-[700] text-[25px] mb-1 group-hover:text-white group-hover:font-[600] text-xl">
                       {education.title}
                     </h3>
-                    <h4 className="text-secondaryColor font-[600] text-[20px] mb-2 group-hover:text-white">
+                    <h4 className="text-secondaryColor font-[500] text-[17px] mb-2 group-hover:text-white">
                       {education.subtitle}
                     </h4>
                     <p className="text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-5">
                       {education.description}
                     </p>
+                    <div className="hashtags">
+                        {education.hashtags.map((hashtag, index) => (
+                            <span
+                            key={index}
+                            className="text-primaryColor text-[12px] px-2 py-1 rounded-[5px] mt-2 mr-2 inline-block group-hover:text-white hover:underline"
+                            >
+                            #{hashtag}
+                            </span>
+                        ))}
+                    </div>
                   </div>
                 </div>
               </div>

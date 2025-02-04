@@ -10,6 +10,7 @@ import Services from "./components/UI/Services";
 import Portfolio from "./components/UI/Portfolio";
 import Contact from "./components/UI/Contact";
 import Education from "./components/UI/Education";
+import Experience from "./components/UI/Experience";
 
 const App = () => {
   useEffect(() => {
@@ -24,6 +25,7 @@ const App = () => {
         <Services />
         <Portfolio />
         <Education />
+        <Experience />
         <Contact />
       </main>
       <Footer />

@@ -77,7 +77,7 @@ export default function Experience() {
   ];
 
   return (
-    <section className="container lg:pt-5">
+    <section className="container lg:pt-5" id="experience">
       <div className="mb-7 sm:mb-0">
         <h3 className="text-headingColor font-[700] text-[2rem]">Experience</h3>
       </div>

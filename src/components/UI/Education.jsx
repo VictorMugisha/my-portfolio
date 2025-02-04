@@ -29,13 +29,13 @@ export default function Education() {
   ];
 
   return (
-    <section className="container lg:pt-5">
+    <section className="container lg:pt-5" id="education">
       <div className="mb-7 sm:mb-0">
         <h3 className="text-headingColor font-[700] text-[2rem]">
           Education Background
         </h3>
       </div>
-      <div className="w-full py-3 px-2 sm:px-0 flex items-center justify-center flex-col md:flex-row">
+      <div className="w-full py-3 px-2 sm:px-0 flex items-center justify-center flex-col lg:flex-row">
         {educationData.map((education, index) => (
           <div
             key={education.id}

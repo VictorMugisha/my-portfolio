@@ -101,6 +101,24 @@ const Header = () => {
                   Contact
                 </a>
               </li>
+              <li>
+                <a
+                  onClick={handleClick}
+                  className="text-smallTextColor font-[600]"
+                  href="#education"
+                >
+                  Education
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={handleClick}
+                  className="text-smallTextColor font-[600]"
+                  href="#experience"
+                >
+                  Experience
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -113,7 +131,7 @@ const Header = () => {
             </a>
             <span
               onClick={toggleMenu}
-              className="text-2xl text-smallTextColor cursor-pointer md:hidden"
+              className="text-2xl text-smallTextColor cursor-pointer lg:hidden"
             >
               <i className="ri-menu-line"></i>
             </span>

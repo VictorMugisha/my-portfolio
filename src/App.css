@@ -37,7 +37,7 @@ section {
   z-index: 99;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 930px) {
   .menu {
     width: 100%;
     height: 100%;

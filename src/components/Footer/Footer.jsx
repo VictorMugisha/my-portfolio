@@ -45,7 +45,9 @@ const Footer = () => {
               </span>
               <span className="w-[35px] h-[35px] bg-[#2b2d33] p-1 rounded-[50px] cursor-pointer text-center">
                 <a
-                  href="#social-media-link"
+                  href="https://github.com/VictorMugisha"
+                  target="_blank"
+                  rel="noreferrer"
                   className=" text-gray-300 font-[500] text-[18px] "
                 >
                   <i className="ri-github-line"></i>
@@ -53,23 +55,29 @@ const Footer = () => {
               </span>
               <span className="w-[35px] h-[35px] bg-[#2b2d33] p-1 rounded-[50px] cursor-pointer text-center">
                 <a
-                  href="#social-media-link"
+                  href="http://discordapp.com/users/1188580923038519388"
+                  target="_blank"
+                  rel="noreferrer"
                   className=" text-gray-300 font-[500] text-[18px] "
                 >
-                  <i className="ri-youtube-line"></i>
+                  <i className="ri-discord-line"></i>
                 </a>
               </span>
               <span className="w-[35px] h-[35px] bg-[#2b2d33] p-1 rounded-[50px] cursor-pointer text-center">
                 <a
-                  href="#social-media-link"
+                  href="https://www.linkedin.com/in/victor-mugisha-shyaka-47b10b233/"
+                  target="_blank"
+                  rel="noreferrer"
                   className=" text-gray-300 font-[500] text-[18px] "
                 >
-                  <i className="ri-facebook-line"></i>
+                  <i className="ri-linkedin-line"></i>
                 </a>
               </span>
               <span className="w-[35px] h-[35px] bg-[#2b2d33] p-1 rounded-[50px] cursor-pointer text-center">
                 <a
-                  href="#social-media-link"
+                  href="https://www.instagram.com/victor_mugisha001/"
+                  target="_blank"
+                  rel="noreferrer"
                   className=" text-gray-300 font-[500] text-[18px] "
                 >
                   <i className="ri-instagram-line"></i>

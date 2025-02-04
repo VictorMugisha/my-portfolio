@@ -7,6 +7,7 @@ export default function Experience() {
       id: 1,
       company: "The Gym Rwanda",
       title: "Software Developer",
+      companyLink: "https://www.the-gym.rw/",
       duration: "November 2024 - Present",
       description:
         "Serving as a software development coach for current cohorts across various university campuses, including ALU and AUCA. Responsibilities include conducting assessments at institutions such as Kepler College.",
@@ -29,6 +30,7 @@ export default function Experience() {
       id: 2,
       company: "The Gym Rwanda",
       title: "Software Development Trainee",
+      companyLink: "https://www.the-gym.rw/",
       duration: "April 2024 - November 2024",
       description:
         "Completed an intense 7-month software development training program, gaining expertise in both frontend and backend technologies, and receiving a certificate of completion.",
@@ -60,6 +62,7 @@ export default function Experience() {
       id: 3,
       company: "ThinkYoung Coding School (sponsored by Boeing)",
       title: "Frontend & Robotics Trainee",
+      companyLink: "https://www.thinkyoungcodingschool.com/",
       duration: "April 2022",
       description:
         "Completed an intensive one-month training program focused on web development fundamentals (HTML, CSS, JavaScript) and robotics. Received a certificate of participation upon completion.",
@@ -93,9 +96,11 @@ export default function Experience() {
                 alt={`${experience.company} Logo`}
               />
             </div>
-            <h4 className="text-primaryColor font-[700] text-[20px] mb-1">
-              {experience.title}
-            </h4>
+            <a href={experience.companyLink} target="_blank" rel="noreferrer">
+              <h4 className="text-primaryColor font-[700] text-[20px] mb-1">
+                {experience.title}
+              </h4>
+            </a>
             <h5 className="text-secondaryColor font-[600] text-[18px] mb-2">
               {experience.company} ({experience.duration})
             </h5>

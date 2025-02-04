@@ -1,4 +1,4 @@
-import collegeImg from "../../assets/images/college.png"; 
+import collegeImg from "../../assets/images/college.png";
 import highSchoolImg from "../../assets/images/high-school.png";
 
 export default function Education() {
@@ -69,14 +69,14 @@ export default function Education() {
                       {education.description}
                     </p>
                     <div className="hashtags">
-                        {education.hashtags.map((hashtag, index) => (
-                            <span
-                            key={index}
-                            className="text-primaryColor text-[12px] px-2 py-1 rounded-[5px] mt-2 mr-2 inline-block group-hover:text-white hover:underline"
-                            >
-                            #{hashtag}
-                            </span>
-                        ))}
+                      {education.hashtags.map((hashtag, index) => (
+                        <span
+                          key={index}
+                          className="text-primaryColor text-[12px] px-2 py-1 rounded-[5px] mt-2 mr-2 inline-block group-hover:text-white hover:underline"
+                        >
+                          #{hashtag}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>

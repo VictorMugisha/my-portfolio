@@ -59,45 +59,43 @@ export default function Experience() {
       <div className="mb-7 sm:mb-0">
         <h3 className="text-headingColor font-[700] text-[2rem]">Experience</h3>
       </div>
-      <div className="relative w-full flex flex-col md:flex-row md:flex-wrap md:justify-between">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {experienceData.map((experience) => (
           <div
             key={experience.id}
-            className="relative w-full md:w-[30%] mb-12 flex flex-col h-full"
+            className="bg-white p-6 rounded shadow-lg text-center flex flex-col items-center cursor-pointer hover:shadow-xl transition-shadow duration-300"
           >
-            <div className="bg-white p-6 rounded shadow-lg w-full text-center flex flex-col items-center flex-grow">
-              <div className="w-24 h-24 mb-4">
-                <img
-                  className="w-full h-full object-contain rounded"
-                  src={experience.logo}
-                  alt={`${experience.company} Logo`}
-                />
-              </div>
-              <h4 className="text-primaryColor font-[700] text-[20px] mb-1">
-                {experience.title}
-              </h4>
-              <h5 className="text-secondaryColor font-[600] text-[18px] mb-2">
-                {experience.company} ({experience.duration})
-              </h5>
-              <p className="text-[15px] text-smallTextColor leading-5 mb-2 flex-grow">
-                {experience.description}
-              </p>
-              <div className="mb-2">
-                <strong>Skills Learned:</strong>
-                <ul className="list-disc list-inside text-smallTextColor text-left">
-                  {experience.skillsLearned.map((skill, i) => (
-                    <li key={i}>{skill}</li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <strong>Technologies Used:</strong>
-                <ul className="list-disc list-inside text-smallTextColor text-left">
-                  {experience.technologiesUsed.map((tech, i) => (
-                    <li key={i}>{tech}</li>
-                  ))}
-                </ul>
-              </div>
+            <div className="w-24 h-24 mb-4">
+              <img
+                className="w-full h-full object-contain rounded"
+                src={experience.logo}
+                alt={`${experience.company} Logo`}
+              />
+            </div>
+            <h4 className="text-primaryColor font-[700] text-[20px] mb-1">
+              {experience.title}
+            </h4>
+            <h5 className="text-secondaryColor font-[600] text-[18px] mb-2">
+              {experience.company} ({experience.duration})
+            </h5>
+            <p className="text-[15px] text-smallTextColor leading-5 mb-2">
+              {experience.description}
+            </p>
+            <div className="mb-2">
+              <strong>Skills Learned:</strong>
+              <ul className="list-disc list-inside text-smallTextColor text-left">
+                {experience.skillsLearned.map((skill, i) => (
+                  <li key={i}>{skill}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <strong>Technologies Used:</strong>
+              <ul className="list-disc list-inside text-smallTextColor text-left">
+                {experience.technologiesUsed.map((tech, i) => (
+                  <li key={i}>{tech}</li>
+                ))}
+              </ul>
             </div>
           </div>
         ))}

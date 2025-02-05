@@ -42,7 +42,7 @@ const Portfolio = () => {
         <div className="flex items-center justify-between flex-wrap">
           <div className="mb-7 sm:mb-0">
             <h3 className="text-headingColor font-[700] text-[2rem]">
-              My recent projects
+              My recent projects (Dummy Data)
             </h3>
           </div>
 

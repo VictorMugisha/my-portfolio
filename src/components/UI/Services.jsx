@@ -23,10 +23,10 @@ const Services = () => {
         <div className="flex flex-col justify-center sm:py-12">
           <div className="w-full py-3 px-2 sm:max-w-xl sm:mx-auto sm:px-0">
             <div className="relative text-gray-700 antialiased text-sm text-semibold">
-              {/* ======= Verticla line running through the middle ======== */}
+              {/* Verticla line running through the middle */}
               <div className="hidden absolute w-1 sm:block bg-indigo-300 h-full left-1/2 transform -translate-x-1/2"></div>
 
-              {/* ======== Left card ======== */}
+              {/* Left card */}
               <div className="mt-6 sm:mt-0 sm:mb-12">
                 <div className="flex items-center-flex sm:flex-row">
                   <div className="flex justify-start w-full mx-auto items-center">
@@ -56,7 +56,7 @@ const Services = () => {
                 </div>
               </div>
 
-              {/* ======== Right Card =========== */}
+              {/* Right Card */}
               <div className="mt-6 sm:mt-0 sm:mb-12">
                 <div className="flex items-center-flex sm:flex-row">
                   <div className="flex justify-end w-full mx-auto items-center">
@@ -88,7 +88,7 @@ const Services = () => {
                 </div>
               </div>
 
-              {/* ======== Left card ======== */}
+              {/* Left card */}
               <div className="mt-6 sm:mt-0 sm:mb-12">
                 <div className="flex items-center-flex sm:flex-row">
                   <div className="flex justify-start w-full mx-auto items-center">
@@ -118,7 +118,7 @@ const Services = () => {
                 </div>
               </div>
 
-              {/* ======== Right Card =========== */}
+              {/* Right Card */}
               <div className="mt-6 sm:mt-0 sm:mb-12">
                 <div className="flex items-center-flex sm:flex-row">
                   <div className="flex justify-end w-full mx-auto items-center">

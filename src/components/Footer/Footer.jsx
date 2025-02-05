@@ -18,7 +18,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#12141e] pt-12">
-      {/* ============ Footer Top ================ */}
+      {/* Footer Top */}
       <div className="container">
         <div className="sm:flex items-center justify-between md:gap-8">
           <div className="w-full sm:w-1/2">
@@ -109,28 +109,39 @@ const Footer = () => {
                 Contact
               </a>
             </li>
+            <li>
+              <a className="text-gray-300 font-[600]" href="#education">
+                Education
+              </a>
+            </li>
+            <li>
+              <a className="text-gray-300 font-[600]" href="#experience">
+                Experience
+              </a>
+            </li>
           </ul>
         </div>
       </div>
-      {/* ============ Footer Top End ================ */}
 
-      {/* ============ Footer bottom ================= */}
+      {/* Footer bottom*/}
       <div className="bg-[#1b1e29] py-5 mt-14">
         <div className="container">
           <div className="flex items-center justify-center md:justify-between">
             <div className="hidden sm:block">
-              <div className="flex items-center gap-[10px]">
-                <span className="w-[35px] h-[35px] rounded-full bg-[#2b2d33] text-white font-[500] text-[18px] flex items-center justify-center">
-                  V
-                </span>
+              <a href="#top">
+                <div className="flex items-center gap-[10px] select-none">
+                  <span className="w-[35px] h-[35px] rounded-full bg-[#2b2d33] text-white font-[500] text-[18px] flex items-center justify-center">
+                    V
+                  </span>
 
-                <div className="leading-[20px]">
-                  <h2 className="text-gray-200 font-[500] text-[18px]">
-                    Victor
-                  </h2>
-                  <p className="text-gray-400 text-[14px]  ">Developer</p>
+                  <div className="leading-[20px]">
+                    <h2 className="text-gray-200 font-[500] text-[18px]">
+                      Victor
+                    </h2>
+                    <p className="text-gray-400 text-[14px]  ">Developer</p>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
 
             <p className="text-gray-400 text-[14px]">
@@ -139,7 +150,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      {/* ============ Footer bottom end ================= */}
     </footer>
   );
 };

@@ -7,7 +7,7 @@ const Hero = () => {
     <section className="pt-0" id="about">
       <div className="container pt-14">
         <div className="md:flex items-center justify-between sm:flex-col md:flex-row">
-          {/* ============= Hero Left Content ============= */}
+          {/* Hero Left Content */}
           <div className="w-full md:basis-1/2">
             <h5
               data-aos="fade-right"
@@ -102,9 +102,8 @@ const Hero = () => {
               </span>
             </div>
           </div>
-          {/* ============= Hero Left End ============= */}
 
-          {/* ============= Hero Img ============= */}
+          {/* Hero Img */}
           <div className="basis-1/2 mt-10 sm:mt-0 flex justify-center relative">
             {/* Animated Background Accent */}
             <div className="absolute w-[250px] h-[250px] bg-gradient-to-r from-blue-400 to-purple-500 opacity-30 rounded-full blur-3xl -z-10 animate-pulse"></div>
@@ -122,9 +121,8 @@ const Hero = () => {
               />
             </div>
           </div>
-          {/* ============= Hero Img End ============= */}
 
-          {/* ============= Hero Right Content ============= */}
+          {/* Hero Right Content */}
           <div className="md:basis-1/5 flex justify-between text-center mt-10 flex-wrap gap-3 md:mt-0 md:flex-col md:justify-end md:text-end">
             <div className="mb-10">
               <h2 className="text-headingColor font-[700] text-[32px]">
@@ -159,7 +157,6 @@ const Hero = () => {
               </h4>
             </div>
           </div>
-          {/* ============= Hero Right Ends ============= */}
         </div>
       </div>
     </section>

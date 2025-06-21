@@ -1,13 +1,22 @@
-import { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import {
   ExternalLink,
-  Github,
   Globe,
   Smartphone,
   Database,
   Code,
   Users,
   User,
+  Zap,
+  Server,
+  Palette,
+  Triangle,
+  RefreshCw,
+  Map,
+  Box,
+  Cloud,
+  BarChart3,
+  Layers,
 } from "lucide-react";
 
 export default function Projects() {
@@ -107,28 +116,28 @@ export default function Projects() {
 
   const getTechIcon = (tech) => {
     const iconMap = {
-      React: "⚛️",
-      "Vue.js": "💚",
-      "Node.js": "🟢",
-      "Next.js": "▲",
-      MongoDB: "🍃",
-      PostgreSQL: "🐘",
-      Tailwind: "🎨",
-      Express: "🚀",
-      "API Integration": "🔌",
-      "Socket.io": "🔗",
-      Redux: "🔄",
-      Maps: "🗺️",
-      Prisma: "🔷",
-      Supabase: "⚡",
-      "Framer Motion": "🎭",
-      Vercel: "▲",
-      Docker: "🐳",
-      AWS: "☁️",
-      GraphQL: "📊",
-      "React Native": "📱",
+      React: Code,
+      "Vue.js": Code,
+      "Node.js": Server,
+      "Next.js": Triangle,
+      MongoDB: Database,
+      PostgreSQL: Database,
+      Tailwind: Palette,
+      Express: Server,
+      "API Integration": Zap,
+      "Socket.io": Zap,
+      Redux: RefreshCw,
+      Maps: Map,
+      Prisma: Box,
+      Supabase: Zap,
+      "Framer Motion": Layers,
+      Vercel: Triangle,
+      Docker: Box,
+      AWS: Cloud,
+      GraphQL: BarChart3,
+      "React Native": Smartphone,
     };
-    return iconMap[tech] || "⚙️";
+    return iconMap[tech] || Code;
   };
 
   const filterProjects = (filterKey) => {
@@ -154,13 +163,12 @@ export default function Projects() {
     setFilteredProjects(projects);
   }, [projects]);
 
-
   return (
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
             Featured Projects
           </h2>
           <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -260,7 +268,9 @@ export default function Projects() {
                       key={tech}
                       className="flex items-center gap-1 px-3 py-1 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium hover:bg-blue-100 hover:text-blue-700 transition-colors duration-200"
                     >
-                      <span>{getTechIcon(tech)}</span>
+                      <span>
+                        {React.createElement(getTechIcon(tech), { size: 14 })}
+                      </span>
                       {tech}
                     </span>
                   ))}
@@ -286,7 +296,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-200"
                   >
-                    <Github size={16} />
+                    <ExternalLink size={16} />
                   </a>
                 </div>
               </div>

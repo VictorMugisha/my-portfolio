@@ -7,11 +7,10 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/UI/Hero";
 import Services from "./components/UI/Services";
-import Portfolio from "./components/UI/Portfolio";
 import Contact from "./components/UI/Contact";
-import Education from "./components/UI/Education";
 import Experience from "./components/UI/Experience";
 import Projects from "./components/UI/Projects";
+import AnotherEducation from "./components/UI/AnotherEducation";
 
 const App = () => {
   useEffect(() => {
@@ -24,9 +23,8 @@ const App = () => {
       <main>
         <Hero />
         <Services />
-        <Portfolio />
         <Projects />
-        <Education />
+        <AnotherEducation />
         <Experience />
         <Contact />
       </main>

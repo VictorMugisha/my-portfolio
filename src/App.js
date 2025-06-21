@@ -11,6 +11,7 @@ import Portfolio from "./components/UI/Portfolio";
 import Contact from "./components/UI/Contact";
 import Education from "./components/UI/Education";
 import Experience from "./components/UI/Experience";
+import Projects from "./components/UI/Projects";
 
 const App = () => {
   useEffect(() => {
@@ -24,6 +25,7 @@ const App = () => {
         <Hero />
         <Services />
         <Portfolio />
+        <Projects />
         <Education />
         <Experience />
         <Contact />

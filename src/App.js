@@ -8,9 +8,9 @@ import Footer from "./components/Footer/Footer";
 import Hero from "./components/UI/Hero";
 import Services from "./components/UI/Services";
 import Contact from "./components/UI/Contact";
-import Experience from "./components/UI/Experience";
 import Projects from "./components/UI/Projects";
 import AnotherEducation from "./components/UI/AnotherEducation";
+import WorkExperience from "./components/UI/WorkExperience";
 
 const App = () => {
   useEffect(() => {
@@ -25,7 +25,7 @@ const App = () => {
         <Services />
         <Projects />
         <AnotherEducation />
-        <Experience />
+        <WorkExperience />
         <Contact />
       </main>
       <Footer />

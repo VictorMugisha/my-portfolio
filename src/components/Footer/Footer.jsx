@@ -105,11 +105,6 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a className="text-gray-300 font-[600]" href="#contact">
-                Contact
-              </a>
-            </li>
-            <li>
               <a className="text-gray-300 font-[600]" href="#education">
                 Education
               </a>
@@ -117,6 +112,11 @@ const Footer = () => {
             <li>
               <a className="text-gray-300 font-[600]" href="#experience">
                 Experience
+              </a>
+            </li>
+            <li>
+              <a className="text-gray-300 font-[600]" href="#contact">
+                Contact
               </a>
             </li>
           </ul>

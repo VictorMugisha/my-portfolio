@@ -330,9 +330,11 @@ export default function Projects() {
               Let's collaborate on your next project and bring your ideas to
               life.
             </p>
-            <button className="bg-white text-primaryColor px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 hover:scale-105 transform">
-              Get In Touch
-            </button>
+            <a href="#contact">
+              <button className="bg-white text-primaryColor px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 hover:scale-105 transform">
+                Get In Touch
+              </button>
+            </a>
           </div>
         </div>
       </div>

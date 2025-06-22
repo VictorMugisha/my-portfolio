@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import {
   ExternalLink,
   Globe,
+  Github,
   Smartphone,
   Database,
   Code,
@@ -29,13 +30,14 @@ export default function Projects() {
     () => [
       {
         id: 1,
-        title: "E-Commerce Dashboard",
+        title: "Sulaina Personal Website",
         description:
-          "Modern admin dashboard for e-commerce management with real-time analytics and inventory tracking.",
-        technologies: ["React", "Node.js", "MongoDB", "Tailwind"],
+          "A modern, responsive personal website designed for Uwase Sulaina, an Economics student from Rwanda studying in Dubai, UAE.",
+        technologies: ["React", "Tailwind"],
         category: "personal",
         type: "web",
-        projectUrl: "https://github.com",
+        projectRepo: "https://github.com/VictorMugisha/sulaina",
+        projectUrl: "https://sulaina.vercel.app/",
         image:
           "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=top",
         featured: true,
@@ -49,6 +51,7 @@ export default function Projects() {
         category: "collaborative",
         type: "web",
         projectUrl: "https://github.com",
+        projectRepo: "",
         image:
           "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&crop=top",
       },
@@ -61,6 +64,7 @@ export default function Projects() {
         category: "personal",
         type: "mobile",
         projectUrl: "https://github.com",
+        projectRepo: "",
         image:
           "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop&crop=top",
       },
@@ -73,6 +77,7 @@ export default function Projects() {
         category: "collaborative",
         type: "fullstack",
         projectUrl: "https://github.com",
+        projectRepo: "",
         image:
           "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop&crop=top",
         featured: true,
@@ -86,6 +91,7 @@ export default function Projects() {
         category: "personal",
         type: "frontend",
         projectUrl: "https://github.com",
+        projectRepo: "",
         image:
           "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop&crop=top",
       },
@@ -98,6 +104,7 @@ export default function Projects() {
         category: "collaborative",
         type: "backend",
         projectUrl: "https://github.com",
+        projectRepo: "",
         image:
           "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&crop=top",
       },
@@ -294,12 +301,12 @@ export default function Projects() {
                     View Project
                   </a>
                   <a
-                    href={project.projectUrl}
+                    href={project.projectRepo}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-200"
                   >
-                    <ExternalLink size={16} />
+                    <Github size={16} />
                   </a>
                 </div>
               </div>

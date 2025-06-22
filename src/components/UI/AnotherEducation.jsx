@@ -19,6 +19,26 @@ export default function AnotherEducation() {
   const educationData = [
     {
       id: 1,
+      type: "University",
+      institution: "The African Leadership University",
+      startYear: 2025,
+      endYear: 2028,
+      description:
+        "I am currently pursuing Software Engineering at ALU, gaining deeper understanding in shell scripting, advanced data structures and algorithms, specializing in Machine Learning and Artificial Intelligence.",
+      image: collegeImg,
+      hashtags: [
+        "#SoftwareEngineering",
+        "#MachineLearning",
+        "#DataStructures",
+        "#AI",
+        "#ShellScripting",
+      ],
+      bgGradient: "from-blue-50 to-indigo-100",
+      accentColor: "blue",
+      isCurrent: true,
+    },
+    {
+      id: 2,
       type: "High School",
       institution: "GS REMERA-RUKOMA",
       startYear: 2020,
@@ -37,26 +57,6 @@ export default function AnotherEducation() {
       bgGradient: "from-green-50 to-emerald-100",
       accentColor: "green",
       isCurrent: false,
-    },
-    {
-      id: 2,
-      type: "University",
-      institution: "The African Leadership University",
-      startYear: 2025,
-      endYear: 2028,
-      description:
-        "I am currently pursuing Software Engineering at ALU, gaining deeper understanding in shell scripting, advanced data structures and algorithms, specializing in Machine Learning and Artificial Intelligence.",
-      image: collegeImg,
-      hashtags: [
-        "#SoftwareEngineering",
-        "#MachineLearning",
-        "#DataStructures",
-        "#AI",
-        "#ShellScripting",
-      ],
-      bgGradient: "from-blue-50 to-indigo-100",
-      accentColor: "blue",
-      isCurrent: true,
     },
   ];
 

@@ -10,6 +10,9 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
+import theGymRwandaLogo from "../../assets/images/the-gym-logo.jpeg";
+import thinkYoungLogo from "../../assets/images/thinkyoung-logo.png";
+
 export default function WorkExperience() {
   const [hoveredCard, setHoveredCard] = useState(null);
 
@@ -34,7 +37,7 @@ export default function WorkExperience() {
         "Node.js",
         "Agile Methodologies",
       ],
-      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=120&h=120&fit=crop&crop=center",
+      logo: theGymRwandaLogo,
       isCurrent: true,
       bgGradient: "from-blue-50 to-indigo-100",
       accentColor: "blue",
@@ -63,7 +66,7 @@ export default function WorkExperience() {
         "PostgreSQL",
         "MongoDB",
       ],
-      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=120&h=120&fit=crop&crop=center",
+      logo: theGymRwandaLogo,
       isCurrent: false,
       bgGradient: "from-green-50 to-emerald-100",
       accentColor: "green",
@@ -82,7 +85,7 @@ export default function WorkExperience() {
         "Problem-Solving",
       ],
       technologiesUsed: ["HTML", "CSS", "JavaScript"],
-      logo: "https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=120&h=120&fit=crop&crop=center",
+      logo: thinkYoungLogo,
       isCurrent: false,
       bgGradient: "from-purple-50 to-violet-100",
       accentColor: "purple",

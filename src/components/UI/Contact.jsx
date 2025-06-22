@@ -55,14 +55,14 @@ const Contact = () => {
     emailjs
       .send(serviceId, templateId, templateParams, publicKey)
       .then((_response) => {
-        toast.success("Email Sent Successfully", {
+        toast.success("Email received! I'll get back to you soon.", {
           position: "top-center",
           autoClose: 5000,
         });
         setFormData({ name: "", email: "", subject: "", message: "" });
       })
       .catch((_error) => {
-        toast.error("Email Failed To Send!", {
+        toast.error("Email failed to send!", {
           position: "top-center",
           autoClose: 5000,
         });

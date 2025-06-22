@@ -25,7 +25,7 @@ export default function Projects() {
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  // Sample project data with realistic portfolio projects
+  // Project data 
   const projects = useMemo(
     () => [
       {
@@ -33,7 +33,7 @@ export default function Projects() {
         title: "Sulaina Personal Website",
         description:
           "A modern, responsive personal website designed for Uwase Sulaina, an Economics student from Rwanda studying in Dubai, UAE.",
-        technologies: ["React", "Tailwind"],
+        technologies: ["React", "Tailwind", "Lucide Icons", "Vercel"],
         category: "personal",
         type: "web",
         projectRepo: "https://github.com/VictorMugisha/sulaina",
@@ -44,40 +44,47 @@ export default function Projects() {
       },
       {
         id: 2,
-        title: "Task Management App",
+        title: "MindForge Website",
         description:
-          "Collaborative project management tool with team features, deadlines, and progress tracking.",
-        technologies: ["Vue.js", "Express", "PostgreSQL", "Socket.io"],
-        category: "collaborative",
+          "MindForge, is a dedicated organization committed to combating corruption within the East African Community (EAC) through innovative solutions and community engagement.",
+        technologies: ["React", "Tailwind", "Netlify", "React Icons"],
+        category: "personal",
         type: "web",
-        projectUrl: "https://github.com",
-        projectRepo: "",
+        projectUrl: "https://mindforge-thinktank.netlify.app/",
+        projectRepo: "https://github.com/VictorMugisha/mindforge-website",
         image:
           "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&crop=top",
       },
       {
         id: 3,
-        title: "Weather Mobile App",
+        title: "HooBank - Modern UI/UX",
         description:
-          "React Native weather application with location services and beautiful weather animations.",
-        technologies: ["React Native", "API Integration", "Redux", "Maps"],
+          "Website using React.js & Tailwind CSS, featuring a sleek design and responsive layout.",
+        technologies: ["React.js", "Tailwind CSS"],
         category: "personal",
-        type: "mobile",
-        projectUrl: "https://github.com",
-        projectRepo: "",
+        type: "web",
+        projectUrl: "https://victor-bank-application.netlify.app/",
+        projectRepo: "https://github.com/VictorMugisha/bank-application",
         image:
-          "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop&crop=top",
+          "https://camo.githubusercontent.com/a4ee5fd4c9c7c4ed60cd5ba7f05479596168f5a373891333af32fc37e806be2d/68747470733a2f2f692e6962622e636f2f424b31486e30782f53637265656e73686f742d323032322d30382d30382d61742d342d30352d34382d504d2e706e67",
       },
       {
         id: 4,
-        title: "Social Media Platform",
+        title: "Wavelength - Fullstack Authentication App",
         description:
-          "Full-stack social platform built collaboratively with real-time messaging and content sharing.",
-        technologies: ["Next.js", "Prisma", "Supabase", "Tailwind"],
-        category: "collaborative",
+          "A fullstack application demonstrating user authentication with Clerk and JWT, built with the MERN stack.",
+        technologies: [
+          "React.js",
+          "MongoDB",
+          "Express",
+          "Node.js",
+          "JWT",
+          "Clerk",
+        ],
+        category: "personal",
         type: "fullstack",
-        projectUrl: "https://github.com",
-        projectRepo: "",
+        projectUrl: "https://wavelength-auth.netlify.app/",
+        projectRepo: "https://github.com/VictorMugisha/react-auth-frontend",
         image:
           "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop&crop=top",
         featured: true,
@@ -87,24 +94,31 @@ export default function Projects() {
         title: "Portfolio Website",
         description:
           "Personal portfolio showcasing projects with smooth animations and responsive design.",
-        technologies: ["React", "Framer Motion", "Tailwind", "Vercel"],
+        technologies: [
+          "React",
+          "Aos Animation",
+          "Tailwind",
+          "Netlify",
+          "Lucide Icons",
+          "Email JS",
+        ],
         category: "personal",
         type: "frontend",
-        projectUrl: "https://github.com",
-        projectRepo: "",
+        projectUrl: "https://victormugisha.netlify.app/",
+        projectRepo: "https://github.com/VictorMugisha/my-portfolio",
         image:
           "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop&crop=top",
       },
       {
         id: 6,
-        title: "API Gateway Service",
+        title: "Wood Correction Website",
         description:
-          "Microservices architecture with team collaboration for enterprise-level API management.",
-        technologies: ["Node.js", "Docker", "AWS", "GraphQL"],
-        category: "collaborative",
-        type: "backend",
-        projectUrl: "https://github.com",
-        projectRepo: "",
+          "My first ever website - a wood furnishing company responsive website built using simple and basic HTML, CSS and JavaScript.",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        category: "personal",
+        type: "frontend",
+        projectUrl: "https://woodcorrectioncoltd.netlify.app/",
+        projectRepo: "https://github.com/VictorMugisha/wood-correction-website",
         image:
           "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&crop=top",
       },

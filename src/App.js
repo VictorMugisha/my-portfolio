@@ -11,8 +11,9 @@ import Contact from "./components/UI/Contact";
 import Projects from "./components/UI/Projects";
 import AnotherEducation from "./components/UI/AnotherEducation";
 import WorkExperience from "./components/UI/WorkExperience";
+import Technologies from "./components/UI/Technologies";
 
-const App = () => {
+export default function App() {
   useEffect(() => {
     Aos.init();
   }, []);
@@ -23,6 +24,7 @@ const App = () => {
       <main>
         <Hero />
         <Services />
+        <Technologies />
         <Projects />
         <AnotherEducation />
         <WorkExperience />
@@ -32,5 +34,3 @@ const App = () => {
     </>
   );
 };
-
-export default App;

@@ -1,10 +1,9 @@
-import React from "react";
 import frontEndImg from "../../assets/images/front-end.png";
 import backendImg from "../../assets/images/backend.png";
 import uiImg from "../../assets/images/design.png";
 import appsImg from "../../assets/images/apps.png";
 
-const Services = () => {
+export default function Services() {
   const services = [
     {
       id: 1,
@@ -115,5 +114,3 @@ const Services = () => {
     </section>
   );
 };
-
-export default Services;

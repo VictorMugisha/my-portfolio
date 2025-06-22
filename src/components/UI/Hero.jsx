@@ -2,7 +2,7 @@ import React from "react";
 import heroImg from "../../assets/images/profile.png";
 import CountUp from "react-countup";
 
-const Hero = () => {
+export default function Hero() {
   return (
     <section className="pt-0" id="about">
       <div className="container pt-14">
@@ -138,7 +138,7 @@ const Hero = () => {
 
             <div className="mb-6 md:mb-10">
               <h2 className="text-headingColor font-bold text-3xl">
-                <CountUp start={0} end={500} duration={2} suffix="+" />
+                <CountUp start={0} end={2000} duration={2} suffix="+" />
               </h2>
               <h4 className="text-headingColor font-semibold text-base mt-1">
                 GitHub Commits
@@ -168,5 +168,3 @@ const Hero = () => {
     </section>
   );
 };
-
-export default Hero;

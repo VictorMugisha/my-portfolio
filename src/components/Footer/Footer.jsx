@@ -87,40 +87,38 @@ const Footer = () => {
           </div>
         </div>
 
-        <div>
-          <ul className="flex items-center justify-center gap-10 py-8">
-            <li>
-              <a className="text-gray-300 font-[600]" href="#about">
-                About
-              </a>
-            </li>
-            <li>
-              <a className="text-gray-300 font-[600]" href="#services">
-                Services
-              </a>
-            </li>
-            <li>
-              <a className="text-gray-300 font-[600]" href="#portfolio">
-                Portfolio
-              </a>
-            </li>
-            <li>
-              <a className="text-gray-300 font-[600]" href="#education">
-                Education
-              </a>
-            </li>
-            <li>
-              <a className="text-gray-300 font-[600]" href="#experience">
-                Experience
-              </a>
-            </li>
-            <li>
-              <a className="text-gray-300 font-[600]" href="#contact">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 justify-center gap-10 py-8">
+          <li>
+            <a className="text-gray-300 font-[600]" href="#about">
+              About
+            </a>
+          </li>
+          <li>
+            <a className="text-gray-300 font-[600]" href="#services">
+              Services
+            </a>
+          </li>
+          <li>
+            <a className="text-gray-300 font-[600]" href="#portfolio">
+              Portfolio
+            </a>
+          </li>
+          <li>
+            <a className="text-gray-300 font-[600]" href="#education">
+              Education
+            </a>
+          </li>
+          <li>
+            <a className="text-gray-300 font-[600]" href="#experience">
+              Experience
+            </a>
+          </li>
+          <li>
+            <a className="text-gray-300 font-[600]" href="#contact">
+              Contact
+            </a>
+          </li>
+        </ul>
       </div>
 
       {/* Footer bottom*/}

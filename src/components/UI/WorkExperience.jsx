@@ -176,7 +176,7 @@ export default function WorkExperience() {
                     <div
                       className={`bg-gradient-to-br ${experience.bgGradient} p-6`}
                     >
-                      <div className="flex items-start gap-4">
+                      <div className="flex flex-col md:flex-row items-start gap-4">
                         {/* Company Logo */}
                         <div className="flex-shrink-0">
                           <img

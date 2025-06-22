@@ -1,7 +1,8 @@
+import React from "react";
 import heroImg from "../../assets/images/profile.png";
 import CountUp from "react-countup";
 
-export default function Hero() {
+const Hero = () => {
   return (
     <section className="pt-0" id="about">
       <div className="container pt-14">
@@ -22,7 +23,9 @@ export default function Hero() {
               className="text-headingColor font-extrabold text-3xl sm:text-4xl leading-tight sm:leading-tight mt-5"
             >
               Hello, I'm Victor Mugisha <br />
-              <span className="text-primaryColor">Full-Stack Developer</span>
+              <span className="text-primaryColor animate-gradient">
+                Full-Stack Developer
+              </span>
             </h1>
 
             <div
@@ -112,7 +115,7 @@ export default function Hero() {
             <div
               className="relative w-4/5 max-w-sm h-auto overflow-hidden rounded-full border-4 border-transparent bg-gradient-to-r from-purple-500 via-blue-400 to-indigo-500 p-1 shadow-2xl 
                 before:absolute before:inset-0 before:bg-white before:rounded-full before:z-[-1] before:opacity-20 before:blur-xl 
-                hover:scale-105 transition-transform duration-500 ease-in-out animate-float"
+                hover:scale-105 transition-transform duration-500 ease-in-out animate-float z-10"
             >
               <img
                 src={heroImg}
@@ -135,7 +138,7 @@ export default function Hero() {
 
             <div className="mb-6 md:mb-10">
               <h2 className="text-headingColor font-bold text-3xl">
-                <CountUp start={0} end={2000} duration={2} suffix="+" />
+                <CountUp start={0} end={500} duration={2} suffix="+" />
               </h2>
               <h4 className="text-headingColor font-semibold text-base mt-1">
                 GitHub Commits
@@ -165,3 +168,5 @@ export default function Hero() {
     </section>
   );
 };
+
+export default Hero;

@@ -5,151 +5,110 @@ import uiImg from "../../assets/images/design.png";
 import appsImg from "../../assets/images/apps.png";
 
 const Services = () => {
+  const services = [
+    {
+      id: 1,
+      title: "Full-Stack Web Development",
+      description:
+        "End-to-end web applications using React, Node.js, and TypeScript. Building scalable solutions from database to user interface.",
+      image: frontEndImg,
+      imageAlt: "Frontend development icon",
+      side: "left",
+    },
+    {
+      id: 2,
+      title: "Mobile App Development",
+      description:
+        "Cross-platform mobile applications with React Native, delivering native performance across iOS and Android platforms.",
+      image: appsImg,
+      imageAlt: "Mobile app development icon",
+      side: "right",
+    },
+    {
+      id: 3,
+      title: "Backend API Development",
+      description:
+        "Robust RESTful APIs and microservices using Node.js, Express.js, with MongoDB and PostgreSQL database integration.",
+      image: backendImg,
+      imageAlt: "Backend development icon",
+      side: "left",
+    },
+    {
+      id: 4,
+      title: "Performance & DevOps",
+      description:
+        "Application optimization, Docker containerization, and deployment strategies for scalable, high-performance solutions.",
+      image: uiImg,
+      imageAlt: "Performance optimization icon",
+      side: "right",
+    },
+  ];
+
+  const ServiceCard = ({ service, index }) => {
+    const isLeft = service.side === "left";
+
+    return (
+      <div className="relative mb-8 sm:mb-12">
+        <div
+          className={`flex items-center ${
+            isLeft ? "justify-start" : "justify-end"
+          } w-full`}
+        >
+          <div className={`w-full sm:w-1/2 ${isLeft ? "sm:pr-8" : "sm:pl-8"}`}>
+            <div
+              data-aos={isLeft ? "fade-right" : "fade-left"}
+              data-aos-duration="1200"
+              data-aos-delay={index * 100}
+              className="bg-white p-6 rounded-lg shadow-lg group hover:bg-primaryColor cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105"
+            >
+              <h3 className="text-primaryColor font-bold text-xl sm:text-2xl mb-4 group-hover:text-white transition-colors duration-300">
+                {service.title}
+              </h3>
+              <p className="text-sm sm:text-base text-smallTextColor group-hover:text-white group-hover:font-medium leading-relaxed transition-all duration-300">
+                {service.description}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Timeline dot - hidden on mobile, visible on desktop */}
+        <div className="hidden sm:flex absolute left-1/2 top-8 transform -translate-x-1/2 w-12 h-12 bg-primaryColor border-white border-4 rounded-full items-center justify-center shadow-lg">
+          <figure className="w-6 h-6">
+            <img
+              src={service.image}
+              alt={service.imageAlt}
+              className="w-full h-full object-contain"
+            />
+          </figure>
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <section id="services">
-      <div className="container lg:pt-5">
-        <div className="text-center">
-          <h2 className="text-headingColor font-[800] text-[2.4rem] mb-5">
-            What I do
+    <section id="services" className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4 lg:pt-5">
+        <div className="text-center mb-16">
+          <h2 className="text-headingColor font-extrabold text-3xl sm:text-4xl mb-6">
+            What I Do
           </h2>
-          <p className="lg:max-w-[600px] lg:mx-auto text-headingColor font-[500] text-[16px] leading-7">
-            Crafting immersive web experiences in Kigali, Rwanda. Leveraging
-            HTML, CSS, JavaScript, ReactJS, and Tailwind CSS to architect
-            dynamic, user-centric solutions. Elevating web standards with
-            innovation and dedication
+          <p className="max-w-3xl mx-auto text-headingColor font-medium text-base sm:text-lg leading-relaxed">
+            Full-stack developer in Kigali, Rwanda, leveraging the
+            JavaScript-TypeScript ecosystem to build scalable web and mobile
+            applications. From React frontends to Node.js backends, delivering
+            modern solutions that drive results.
           </p>
         </div>
 
-        <div className="flex flex-col justify-center sm:py-12">
-          <div className="w-full py-3 px-2 sm:max-w-xl sm:mx-auto sm:px-0">
-            <div className="relative text-gray-700 antialiased text-sm text-semibold">
-              {/* Verticla line running through the middle */}
-              <div className="hidden absolute w-1 sm:block bg-indigo-300 h-full left-1/2 transform -translate-x-1/2"></div>
+        <div className="relative max-w-6xl mx-auto">
+          {/* Timeline line - hidden on mobile, visible on desktop */}
+          <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-indigo-300 to-indigo-500 rounded-full"></div>
 
-              {/* Left card */}
-              <div className="mt-6 sm:mt-0 sm:mb-12">
-                <div className="flex items-center-flex sm:flex-row">
-                  <div className="flex justify-start w-full mx-auto items-center">
-                    <div className="w-full sm:w-1/2 sm:pr-8">
-                      <div
-                        data-aos="fade-right"
-                        data-aos-duration="1200"
-                        className="bg-white p-4 rounded shadow group hover:bg-primaryColor cursor-pointer ease-in duration-150"
-                      >
-                        <h3 className="text-primaryColor font-[700] text-[25px] mb-3 group-hover:text-white group-hover:font-[600] text-xl">
-                          Responsive Web Design
-                        </h3>
-
-                        <p className="text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-5">
-                          Tailored, visually stunning websites ensuring seamless
-                          user experience across all devices and screen sizes.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="rounded-full bg-primaryColor border-white border-4 w-10 h-10 absolute left-1/2 transform -translate-x-1/2 -translate-y-4 mt-[10%] sm:translate-y-0 flex items-center justify-center">
-                    <figure>
-                      <img src={frontEndImg} alt="" />
-                    </figure>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Card */}
-              <div className="mt-6 sm:mt-0 sm:mb-12">
-                <div className="flex items-center-flex sm:flex-row">
-                  <div className="flex justify-end w-full mx-auto items-center">
-                    <div className="w-full sm:w-1/2 sm:pl-8">
-                      <div
-                        data-aos="fade-left"
-                        data-aos-delay="50"
-                        data-aos-duration="1300"
-                        className="bg-white p-4 rounded shadow group hover:bg-primaryColor cursor-pointer ease-in duration-150"
-                      >
-                        <h3 className="text-primaryColor font-[700] text-[25px] mb-3 group-hover:text-white group-hover:font-[600] text-xl">
-                          Interactive UI Development
-                        </h3>
-
-                        <p className="text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-5">
-                          Engaging interfaces crafted with ReactJS, enhancing
-                          user interaction and functionality for optimal
-                          browsing experiences.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="rounded-full bg-primaryColor border-white border-4 w-10 h-10 absolute left-1/2 transform -translate-x-1/2 -translate-y-4 mt-[10%] sm:translate-y-0 flex items-center justify-center">
-                    <figure>
-                      <img src={backendImg} alt="" />
-                    </figure>
-                  </div>
-                </div>
-              </div>
-
-              {/* Left card */}
-              <div className="mt-6 sm:mt-0 sm:mb-12">
-                <div className="flex items-center-flex sm:flex-row">
-                  <div className="flex justify-start w-full mx-auto items-center">
-                    <div className="w-full sm:w-1/2 sm:pr-8">
-                      <div
-                        data-aos="fade-right"
-                        data-aos-duration="1200"
-                        className="bg-white p-4 rounded shadow group hover:bg-primaryColor cursor-pointer ease-in duration-150"
-                      >
-                        <h3 className="text-primaryColor font-[700] text-[25px] mb-3 group-hover:text-white group-hover:font-[600] text-xl">
-                          Performance Optimization
-                        </h3>
-
-                        <p className="text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-5">
-                          Utilizing modern web techniques to boost website speed
-                          and efficiency for enhanced user satisfaction.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="rounded-full bg-primaryColor border-white border-4 w-10 h-10 absolute left-1/2 transform -translate-x-1/2 -translate-y-4 mt-[10%] sm:translate-y-0 flex items-center justify-center">
-                    <figure>
-                      <img src={uiImg} alt="" />
-                    </figure>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Card */}
-              <div className="mt-6 sm:mt-0 sm:mb-12">
-                <div className="flex items-center-flex sm:flex-row">
-                  <div className="flex justify-end w-full mx-auto items-center">
-                    <div className="w-full sm:w-1/2 sm:pl-8">
-                      <div
-                        data-aos="fade-left"
-                        data-aos-delay="100"
-                        data-aos-duration="1400"
-                        className="bg-white p-4 rounded shadow group hover:bg-primaryColor cursor-pointer ease-in duration-150"
-                      >
-                        <h3 className="text-primaryColor font-[700] text-[25px] mb-3 group-hover:text-white group-hover:font-[600] text-xl">
-                          Custom Component Development
-                        </h3>
-
-                        <p className="text-[15px] text-smallTextColor group-hover:text-white group-hover:font-[500] leading-5">
-                          Tailwind CSS and ReactJS expertise in creating
-                          modular, customizable, and scalable frontend elements
-                          for dynamic web solutions.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="rounded-full bg-primaryColor border-white border-4 w-10 h-10 absolute left-1/2 transform -translate-x-1/2 -translate-y-4 mt-[10%] sm:translate-y-0 flex items-center justify-center">
-                    <figure>
-                      <img src={appsImg} alt="" />
-                    </figure>
-                  </div>
-                </div>
-              </div>
-            </div>
+          {/* Services */}
+          <div className="space-y-4 sm:space-y-0">
+            {services.map((service, index) => (
+              <ServiceCard key={service.id} service={service} index={index} />
+            ))}
           </div>
         </div>
       </div>

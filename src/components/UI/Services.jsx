@@ -1,9 +1,23 @@
+import { useEffect, useState } from "react";
 import frontEndImg from "../../assets/images/front-end.png";
 import backendImg from "../../assets/images/backend.png";
 import uiImg from "../../assets/images/design.png";
 import appsImg from "../../assets/images/apps.png";
 
 export default function Services() {
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsLargeScreen(window.innerWidth >= 768); // md breakpoint
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   const services = [
     {
       id: 1,
@@ -46,6 +60,15 @@ export default function Services() {
   const ServiceCard = ({ service, index }) => {
     const isLeft = service.side === "left";
 
+    // Create AOS attributes object conditionally
+    const aosProps = isLargeScreen
+      ? {
+          "data-aos": isLeft ? "fade-right" : "fade-left",
+          "data-aos-duration": "1200",
+          "data-aos-delay": index * 100,
+        }
+      : {};
+
     return (
       <div className="relative mb-8 sm:mb-12">
         <div
@@ -55,9 +78,7 @@ export default function Services() {
         >
           <div className={`w-full sm:w-1/2 ${isLeft ? "sm:pr-8" : "sm:pl-8"}`}>
             <div
-              data-aos={isLeft ? "fade-right" : "fade-left"}
-              data-aos-duration="1200"
-              data-aos-delay={index * 100}
+              {...aosProps}
               className="bg-white p-6 rounded-lg shadow-lg group hover:bg-primaryColor cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105"
             >
               <h3 className="text-primaryColor font-bold text-xl sm:text-2xl mb-4 group-hover:text-white transition-colors duration-300">
@@ -113,4 +134,4 @@ export default function Services() {
       </div>
     </section>
   );
-};
+}

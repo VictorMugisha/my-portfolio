@@ -39,7 +39,7 @@ export default function Projects() {
         projectRepo: "https://github.com/VictorMugisha/sulaina",
         projectUrl: "https://sulaina.vercel.app/",
         image:
-          "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=top",
+          "https://plus.unsplash.com/premium_photo-1661600114108-3179188e1ab3?w=600&h=400&fit=crop&crop=top",
         featured: true,
       },
       {
@@ -53,7 +53,7 @@ export default function Projects() {
         projectUrl: "https://mindforge-thinktank.netlify.app/",
         projectRepo: "https://github.com/VictorMugisha/mindforge-website",
         image:
-          "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&crop=top",
+          "https://images.unsplash.com/photo-1573164574572-cb89e39749b4?w=600&h=400&fit=crop&crop=top",
       },
       {
         id: 3,
@@ -66,7 +66,7 @@ export default function Projects() {
         projectUrl: "https://victor-bank-application.netlify.app/",
         projectRepo: "https://github.com/VictorMugisha/bank-application",
         image:
-          "https://camo.githubusercontent.com/a4ee5fd4c9c7c4ed60cd5ba7f05479596168f5a373891333af32fc37e806be2d/68747470733a2f2f692e6962622e636f2f424b31486e30782f53637265656e73686f742d323032322d30382d30382d61742d342d30352d34382d504d2e706e67",
+          "https://images.unsplash.com/photo-1556742111-a301076d9d18?w=600&h=400&fit=crop&crop=to",
       },
       {
         id: 4,
@@ -86,7 +86,7 @@ export default function Projects() {
         projectUrl: "https://wavelength-auth.netlify.app/",
         projectRepo: "https://github.com/VictorMugisha/react-auth-frontend",
         image:
-          "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop&crop=top",
+          "https://plus.unsplash.com/premium_photo-1700766408965-f73b16458fee?w=600&h=400&fit=crop&crop=top",
         featured: true,
       },
       {
@@ -107,7 +107,7 @@ export default function Projects() {
         projectUrl: "https://victormugisha.netlify.app/",
         projectRepo: "https://github.com/VictorMugisha/my-portfolio",
         image:
-          "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop&crop=top",
+          "https://plus.unsplash.com/premium_photo-1681666713641-8d722b681edc?w=600&h=400&fit=crop&crop=top",
       },
       {
         id: 6,
@@ -120,7 +120,7 @@ export default function Projects() {
         projectUrl: "https://woodcorrectioncoltd.netlify.app/",
         projectRepo: "https://github.com/VictorMugisha/wood-correction-website",
         image:
-          "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&crop=top",
+          "https://images.unsplash.com/photo-1647426994723-ab685e4b8c77?w=600&h=400&fit=crop&crop=top",
       },
     ],
     []
@@ -192,10 +192,10 @@ export default function Projects() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+          <h2 className="text-headingColor font-extrabold text-3xl sm:text-4xl mb-6">
             Featured Projects
           </h2>
-          <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="max-w-3xl mx-auto text-headingColor font-medium text-base sm:text-lg leading-relaxed">
             A showcase of my development journey, featuring both independent
             creations and collaborative efforts that demonstrate my passion for
             building innovative digital solutions.

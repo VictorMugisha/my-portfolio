@@ -81,10 +81,10 @@ export default function AnotherEducation() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+          <h2 className="text-headingColor font-extrabold text-3xl sm:text-4xl mb-6">
             Education Background
           </h2>
-          <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="max-w-3xl mx-auto text-headingColor font-medium text-base sm:text-lg leading-relaxed">
             My educational journey has provided me with a strong foundation in
             both fundamental principles and cutting-edge technologies, preparing
             me for the challenges of modern development.

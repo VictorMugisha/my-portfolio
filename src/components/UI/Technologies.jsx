@@ -270,10 +270,10 @@ export default function Technologies() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-headingColor font-extrabold text-3xl sm:text-4xl mb-6">
             Technologies & Tools
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="max-w-3xl mx-auto text-headingColor font-medium text-base sm:text-lg leading-relaxed">
             A comprehensive overview of the programming languages, frameworks,
             databases, and development tools I use to build modern applications.
           </p>

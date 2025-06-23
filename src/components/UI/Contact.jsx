@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { AlertCircle, Mail, MessageSquare, Send, User } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 
-const Contact = () => {
+export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,7 +20,7 @@ const Contact = () => {
     message: "",
   });
 
-  function submitForm(e) {
+  async function submitForm(e) {
     e.preventDefault();
 
     // Validate form fields
@@ -51,116 +52,226 @@ const Contact = () => {
     };
 
     // Send the email using EmailJS
-    setSending(true);
-    emailjs
-      .send(serviceId, templateId, templateParams, publicKey)
-      .then((_response) => {
+    try {
+      setSending(true);
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
+      if (response.status === 200) {
         toast.success("Email received! I'll get back to you soon.", {
           position: "top-center",
           autoClose: 5000,
         });
         setFormData({ name: "", email: "", subject: "", message: "" });
-      })
-      .catch((_error) => {
-        toast.error("Email failed to send!", {
-          position: "top-center",
-          autoClose: 5000,
-        });
-      })
-      .finally(() => {
-        setSending(false);
+      }
+    } catch (error) {
+      toast.error("Email failed to send!", {
+        position: "top-center",
+        autoClose: 5000,
       });
+    } finally {
+      setSending(false);
+    }
   }
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+
+    // Clear error when user starts typing
+    if (formError) {
+      setFormError((prev) => ({ ...prev, [name]: "" }));
+    }
+  };
 
   return (
     <section className="pb-16" id="contact">
-      <div className="container">
-        <h2 className="text-headingColor font-[700] text-[2.5rem] mb-8">
-          Get in Touch
-        </h2>
-        <div className="md:flex justify-between items-start gap-4">
-          <div className="w-full md:w-1/2 h-[300px] sm:h-[450px]">
-            <iframe
-              title="google-maps"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255203.60532802224!2d29.96242731520134!3d-1.9294194478840436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca4258ed8e797%3A0xf32b36a5411d0bc8!2sKigali!5e0!3m2!1sen!2srw!4v1703550189234!5m2!1sen!2srw"
-              className="border-0 w-full h-full"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Get in Touch
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Have a project in mind or want to collaborate? I'd love to hear from
+            you. Let's discuss how we can work together to bring your ideas to
+            life.
+          </p>
+        </div>
+
+        {/* Main Content Container */}
+        <div className="flex flex-col lg:flex-row gap-8 max-w-7xl mx-auto">
+          {/* Map Section */}
+          <div className="w-full lg:w-1/2">
+            <div className="h-[400px] lg:h-[600px] rounded-2xl overflow-hidden shadow-xl">
+              <iframe
+                title="google-maps"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255203.60532802224!2d29.96242731520134!3d-1.9294194478840436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca4258ed8e797%3A0xf32b36a5411d0bc8!2sKigali!5e0!3m2!1sen!2srw!4v1703550189234!5m2!1sen!2srw"
+                className="border-0 w-full h-full"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
 
-          <div className="w-full mt-8 md:mt-0 md:w-1/2 lg:flex items-center bg-indigo-100 px-2 lg:px-8 py-6">
-            <form className="w-full" onSubmit={submitForm}>
-              <div className="mb-5 flex flex-col items-start gap-1">
-                <input
-                  type="text"
-                  placeholder="Enter your name"
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
-                  className="w-full p-3 focus:outline-none rounded-[5px]"
-                />
-                {formError.name && (
-                  <p className="pl-3 text-red-600">{formError.name}</p>
-                )}
+          {/* Form Section */}
+          <div className="w-full lg:w-1/2">
+            <div className="h-full lg:h-[600px] bg-white rounded-2xl shadow-xl p-8 flex flex-col">
+              {/* Form Header */}
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                  Send Me a Message
+                </h3>
+                <p className="text-gray-600">
+                  Fill out the form below and I'll get back to you as soon as
+                  possible.
+                </p>
               </div>
 
-              <div className="mb-5">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
-                  className="w-full p-3 focus:outline-none rounded-[5px]"
-                />
-                {formError.email && (
-                  <p className="pl-3 text-red-600">{formError.email}</p>
-                )}
-              </div>
+              {/* Form Container - Takes remaining space */}
+              <div className="flex-1 flex flex-col space-y-4">
+                {/* Name Field */}
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Full Name *
+                  </label>
+                  <div className="relative">
+                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primaryColor transition-colors ${
+                        formError.name ? "border-red-500" : "border-gray-300"
+                      }`}
+                      placeholder="Enter your full name"
+                    />
+                  </div>
+                  {formError.name && (
+                    <div className="flex items-center mt-1 text-red-600">
+                      <AlertCircle className="w-4 h-4 mr-1" />
+                      <span className="text-sm">{formError.name}</span>
+                    </div>
+                  )}
+                </div>
 
-              <div className="mb-5">
-                <input
-                  type="text"
-                  placeholder="Subject"
-                  value={formData.subject}
-                  onChange={(e) =>
-                    setFormData({ ...formData, subject: e.target.value })
-                  }
-                  className="w-full p-3 focus:outline-none rounded-[5px]"
-                />
-                {formError.subject && (
-                  <p className="pl-3 text-red-600">{formError.subject}</p>
-                )}
-              </div>
+                {/* Email Field */}
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Email Address *
+                  </label>
+                  <div className="relative">
+                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primaryColor transition-colors ${
+                        formError.email ? "border-red-500" : "border-gray-300"
+                      }`}
+                      placeholder="yourname@example.com"
+                    />
+                  </div>
+                  {formError.email && (
+                    <div className="flex items-center mt-1 text-red-600">
+                      <AlertCircle className="w-4 h-4 mr-1" />
+                      <span className="text-sm">{formError.email}</span>
+                    </div>
+                  )}
+                </div>
 
-              <div className="mb-5">
-                <textarea
-                  type="text"
-                  rows="6"
-                  placeholder="Your Message Here..."
-                  value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
-                  className="w-full h-32 p-3 focus:outline-none rounded-[5px] resize-none"
-                />
-                {formError.message && (
-                  <p className="pl-3 text-red-600">{formError.message}</p>
-                )}
-              </div>
+                {/* Subject Field */}
+                <div>
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Subject *
+                  </label>
+                  <div className="relative">
+                    <MessageSquare className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                      className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primaryColor transition-colors ${
+                        formError.subject ? "border-red-500" : "border-gray-300"
+                      }`}
+                      placeholder="What's this about?"
+                    />
+                  </div>
+                  {formError.subject && (
+                    <div className="flex items-center mt-1 text-red-600">
+                      <AlertCircle className="w-4 h-4 mr-1" />
+                      <span className="text-sm">{formError.subject}</span>
+                    </div>
+                  )}
+                </div>
 
-              <button
-                type="submit"
-                className="w-full p-3 focus:outline-none rounded-[5px] bg-smallTextColor text-white hover:bg-headingColor text-center ease-linear duration-150"
-                disabled={sending}
-              >
-                {sending ? "Sending..." : "Send Message"}
-              </button>
-            </form>
+                {/* Message Field - Grows to fill remaining space */}
+                <div className="flex-1 flex flex-col">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Message *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    className={`flex-1 w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primaryColor transition-colors resize-none min-h-[120px] ${
+                      formError.message ? "border-red-500" : "border-gray-300"
+                    }`}
+                    placeholder="Tell me about your project, ideas, or anything you'd like to discuss..."
+                  />
+                  {formError.message && (
+                    <div className="flex items-center mt-1 text-red-600">
+                      <AlertCircle className="w-4 h-4 mr-1" />
+                      <span className="text-sm">{formError.message}</span>
+                    </div>
+                  )}
+                </div>
+
+                {/* Submit Button */}
+                <div className="pt-4">
+                  <button
+                    type="submit"
+                    disabled={sending}
+                    onClick={submitForm}
+                    className="w-full bg-gradient-to-r from-primaryColor to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-primaryColor focus:ring-offset-2 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                  >
+                    {sending ? (
+                      <>
+                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5 mr-2" />
+                        Send Message
+                      </>
+                    )}
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
 
           <ToastContainer
@@ -179,6 +290,4 @@ const Contact = () => {
       </div>
     </section>
   );
-};
-
-export default Contact;
+}

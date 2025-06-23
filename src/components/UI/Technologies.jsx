@@ -49,7 +49,7 @@ export default function Technologies() {
         },
         {
           name: "Tailwind CSS",
-          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
         },
         {
           name: "Material UI",
@@ -57,15 +57,15 @@ export default function Technologies() {
         },
         {
           name: "React Router",
-          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/reactrouter/reactrouter-original.svg",
         },
         {
           name: "Headless UI",
-          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/headlessui/headlessui-original.svg",
         },
         {
           name: "Framer Motion",
-          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/framermotion/framermotion-original.svg",
         },
       ],
     },
@@ -81,7 +81,7 @@ export default function Technologies() {
         },
         {
           name: "Nest.js",
-          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg",
         },
         {
           name: "Express.js",

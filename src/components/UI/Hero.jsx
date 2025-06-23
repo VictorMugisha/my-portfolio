@@ -141,7 +141,7 @@ export default function Hero() {
                 <CountUp start={0} end={2000} duration={2} suffix="+" />
               </h2>
               <h4 className="text-headingColor font-semibold text-base mt-1">
-                GitHub Commits
+                GitHub Contributions
               </h4>
             </div>
 
